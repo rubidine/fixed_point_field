@@ -1,0 +1,61 @@
+FixedPointField
+===============
+
+Stores floating point values in an integer database column.
+
+Most useful for currency, fixed_point_field is a library that lets you tell your
+active record classes that some numeric column needs to be upscaled when saved
+and downscaled when loaded, by some known number of decimal places.  It also
+generates stubs to directly access the fixed point version of the number, if
+you need to use mathematics and remain exact, you can multiply the fixed width
+version of your number by another integer and then down convert the result
+manually. The formula for this is:
+  fixed_num.to_f / (base ** width)
+
+
+Usage
+=====
+
+class Product < ActiveRecord::Base
+  fixed_point_field :price
+end
+
+prod = Product.new(:price => 12.75)
+prod.price                          # => 12.75
+prod.price_fixed                    # => 1275
+
+# it is stored as an int
+prod.send(:read_attribute, :price)  # => 1275
+
+# fixed point setter
+prod.price_fixed = 1999
+prod.price                          # => 19.99
+
+
+Other widths and bases
+======================
+
+This library was designed to be used to store American currency (USD), but may
+be useful in other situations as well.  To store a number with a fixed point
+width of 10, use:
+
+fixed_point_field :very_precise_column, :width => 10
+
+You can also store numbers in other bases other than decimal numbers, but any
+base that is not evenly divisible by 10 will give you rounding errors, negating
+the value of the plugin.  I'm not sure why you'd need this, but here it is:
+
+fixed_point_field :base_twenty_column, :base => 20
+
+
+Feedback
+========
+
+todd@voltaiccommerce.com
+
+
+Real world usage
+================
+
+This library was designed for Hummingbird, an open souce eCommerce solution
+from Voltaic Commerce.  Find out more at http://hummingbird.voltaiccommerce.com/
