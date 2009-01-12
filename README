@@ -51,11 +51,4 @@ fixed_point_field :base_twenty_column, :base => 20
 Feedback
 ========
 
-todd@voltaiccommerce.com
-
-
-Real world usage
-================
-
-This library was designed for Hummingbird, an open souce eCommerce solution
-from Voltaic Commerce.  Find out more at http://hummingbird.voltaiccommerce.com/
+powerup@rubidine.com

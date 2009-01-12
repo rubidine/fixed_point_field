@@ -1,6 +1,6 @@
 # The MIT License
 # 
-# Copyright (c) 2007 Todd Willey <todd@lvoltaiccommerce.com>
+# Copyright (c) 2009 Rubidine <powerup@rubidine.com>
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
