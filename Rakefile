@@ -1,8 +1,3 @@
-begin
-  require File.join(File.dirname(__FILE__), '..', '..', '..', 'config', 'environment')
-rescue LoadError
-  raise "Please test from within your rails application: Unable to load environment.rb"
-end
 require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'

@@ -48,6 +48,14 @@ the value of the plugin.  I'm not sure why you'd need this, but here it is:
 fixed_point_field :base_twenty_column, :base => 20
 
 
+Installation
+============
+
+The preferred method of installation is through Rubygems.  You can use
+config.gem, bundler, or manually install the fixed_point_field gem, depending
+on your version of Rails and desired usage.
+
+
 Feedback
 ========
 

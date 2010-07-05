@@ -1,12 +1,12 @@
-# this doesn't stand alone, load rails
-unless defined?(RAILS_ROOT)
-  ENV['RAILS_ENV'] = 'test'
-  begin
-    require File.join(File.dirname(__FILE__), '..', '..', '..', '..', 'config', 'environment')
-  rescue
-    raise "Please test from within your rails app vendor/plugins/THISPLUGIN: Unable to load config/environment.rb"
-  end
+begin
+    require 'active_record'
+rescue LoadError
+    require 'rubygems'
+    require 'active_record'
 end
+
+$: << File.join(File.dirname(__FILE__), '..', 'lib')
+require File.join(File.dirname(__FILE__), '..', 'init.rb')
 
 begin
   require 'mocha'
