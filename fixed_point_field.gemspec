@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "fixed_point_field"
-  s.version = "1.0"
+  s.version = "1.1"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["Todd Willey <todd@rubidine.com>"]
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.files = [
     "README",
     "Rakefile",
-    "init.rb",
+    "rails/init.rb",
     "lib/fixed_point_field.rb",
     "tasks/fixed_point_field_tasks.rake",
     "test/fixed_point_field_test.rb"
