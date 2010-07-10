@@ -1,2 +1,1 @@
-require 'fixed_point_field'
-ActiveRecord::Base.send :include, FixedPointField
+require mfixed_point_field'

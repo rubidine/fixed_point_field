@@ -1,17 +1,16 @@
 Gem::Specification.new do |s|
   s.name = "fixed_point_field"
-  s.version = "1.1"
+  s.version = "1.2"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["Todd Willey <todd@rubidine.com>"]
-  s.date = "2010-07-05"
+  s.date = "2010-07-09"
   s.description = "Store numeric amounts with a known number of decial points, such as currency, as a whole number, for more precise (non-floating point) operations."
   s.email = "powerup@rubidine.com"
   s.extra_rdoc_files = ["README"]
   s.files = [
     "README",
     "Rakefile",
-    "rails/init.rb",
     "lib/fixed_point_field.rb",
     "tasks/fixed_point_field_tasks.rake",
     "test/fixed_point_field_test.rb"
